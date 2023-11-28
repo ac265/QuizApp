@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TestActivity">
+
+    <!-- TODO: Edit top home fragment layout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/app_bar_layout"
+        tools:ignore="MissingConstraints">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/home_tool_bar"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/material_dynamic_primary30">
+
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/material_dynamic_primary30">
+
+                <TextView
+                    android:id="@+id/app_bar_header"
+                    android:textColor="@color/white"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:layout_gravity="center_vertical"/>
+
+                <ImageView
+                    android:id="@+id/back_icon"
+                    android:layout_width="40dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/back_icon"
+                    android:layout_gravity="center_vertical"/>
+
+            </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_general_culture"
+        android:layout_width="129dp"
+        android:layout_height="120dp"
+        style="@style/Widget.AppCompat.Button"
+        android:background="@color/material_dynamic_primary30"
+        android:clickable="true"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/app_bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.171"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ly_general_ability"
+        app:layout_constraintVertical_bias="0.365"  >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="30dp"
+            android:maxWidth="30dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/exam_icon" />
+
+        <TextView
+            android:id="@+id/tvSearchCaption"
+            android:layout_width="79dp"
+            android:layout_height="98dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="GENEL KÜLTÜR  \n \n 60 SORU"
+            android:textColor="@color/white"
+            android:background="@color/material_dynamic_primary30" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_general_ability"
+        android:layout_width="129dp"
+        android:layout_height="120dp"
+        style="@style/Widget.AppCompat.Button"
+        android:background="@color/material_dynamic_primary30"
+        android:clickable="true"
+        android:padding="16dp"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toTopOf="@+id/app_bar_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.783"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.754" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="30dp"
+            android:maxWidth="30dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/exam_icon" />
+
+        <TextView
+            android:layout_width="79dp"
+            android:layout_height="98dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text="GENEL YETENEK  \n \n 60 SORU"
+            android:textColor="@color/white"
+            android:background="@color/material_dynamic_primary30" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ly_all_test"
+        android:layout_width="225dp"
+        android:layout_height="140dp"
+        style="@style/Widget.AppCompat.Button"
+        android:background="@color/material_dynamic_primary30"
+        android:clickable="true"
+        android:padding="16dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/ly_general_ability"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.451"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.556" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="5dp"
+            android:adjustViewBounds="true"
+            android:maxHeight="30dp"
+            android:maxWidth="30dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/exam_icon" />
+
+        <TextView
+            android:layout_width="79dp"
+            android:layout_height="98dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center"
+            android:text= "TÜM SINAV  \n \n 120 SORU"
+            android:textColor="@color/white"
+            android:background="@color/material_dynamic_primary30" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
